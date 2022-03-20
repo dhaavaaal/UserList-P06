@@ -1,7 +1,13 @@
-import './App.css';
+import HoverCard from './components/HoverCard/HoverCard';
+import UsersContainer from './components/UsersContainer/UsersContainer';
 
 function App() {
-  return <div className='App'></div>;
+  return (
+    <div>
+      <UsersContainer />
+      <HoverCard />
+    </div>
+  );
 }
 
 export default App;

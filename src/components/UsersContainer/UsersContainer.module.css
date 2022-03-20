@@ -1,0 +1,17 @@
+.content-container {
+  height: 100%;
+  background-color: white;
+  width: 95%;
+}
+.inner-content-container {
+  height: inherit;
+  margin-left: 50px;
+}
+.content-heading {
+  display: grid;
+  grid-template-columns: 32% 19% 19% 10%;
+  padding: 17px;
+  font-weight: 600;
+  font-size: 15px;
+  font-family: sans-serif;
+}
