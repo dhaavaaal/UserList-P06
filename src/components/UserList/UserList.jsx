@@ -1,10 +1,12 @@
 import React from 'react';
 import styles from './UserList.module.css';
 import { Lock, Trash2 } from 'react-feather';
+import { useDispatch } from 'react-redux';
+import { onMouseHover } from '../../redux/action';
 
 const UserList = (props) => {
   console.log(props);
-
+  const dispatch = useDispatch();
   return (
     <div className={styles['list']}>
       <div className={styles['profile-column']}>
@@ -12,6 +14,8 @@ const UserList = (props) => {
           src={props.profileImage}
           alt='Profile Pic'
           className={styles['image']}
+          onMouseEnter={() => dispatch(onMouseHover(props.id))}
+          // onMouseLeave={() => dispatch(offMouseHover)}
         />
         <div className={styles['name-email']}>
           <p className={styles['name']}>
@@ -28,8 +32,8 @@ const UserList = (props) => {
         ) : (
           <div className={styles['select-div']}>
             <select>
+              <option>Inactive</option>
               <option>Active</option>
-              <option selected>Inactive</option>
             </select>
           </div>
         )}

@@ -113,7 +113,21 @@ const initialState = {
 };
 
 const reducerFunction = (state = initialState, action) => {
-  return state;
+  switch (action.type) {
+    case 'onMouseOver':
+      return {
+        ...state,
+        userId: action.payload,
+      };
+    // case 'offMouseOver':
+    //   return {
+    //     ...state,
+    //     userId: null,
+    //   };
+
+    default:
+      return state;
+  }
 };
 
 export default reducerFunction;
