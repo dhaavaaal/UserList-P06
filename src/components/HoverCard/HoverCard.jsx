@@ -10,10 +10,8 @@ const HoverCard = () => {
   if (typeof id !== 'number') {
     return (
       <div className={styles['hovercard-container']}>
-        <div className={styles['hovercard-inner']}>
-          <div className={styles['card-data']}>
-            <p>Please hover</p>
-          </div>
+        <div className={styles['hovercard-hover']}>
+            <p>Please hover on the user to view profile details</p>
         </div>
       </div>
     );
@@ -28,14 +26,14 @@ const HoverCard = () => {
               className={styles['user-image']}
             />
             <div className={styles['active']}>
-              <h3>
-                {user.first_name} {user.last_name}
+              <h3> {user.isActive ? (<div className={styles['active-dot-div']}>{user.first_name} {user.last_name}<div className={styles['active-dot']}></div></div>) : (`${user.first_name} ${user.last_name}`)}
+                
               </h3>
             </div>
             <p>{user.email}</p>
             <h4>Your Plan: Standard</h4>
             <button className={styles['active-user-button']}>
-              Active User
+              {user.isActive ? `Inactive User` : `Active User`}
             </button>
           </div>
           <div className={styles['card-uses']}>

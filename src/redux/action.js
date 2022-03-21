@@ -1,12 +1,19 @@
+import { ON_MOUSE_OVER, OFF_MOUSE_OVER, ACTIVE_USER } from "./actionTypes";
 const onMouseHover = (id) => {
   return {
-    type: 'onMouseOver',
+    type: ON_MOUSE_OVER,
     payload: id,
   };
 };
 const offMouseHover = () => {
   return {
-    type: 'offMouseOver',
+    type: OFF_MOUSE_OVER,
   };
 };
-export { onMouseHover, offMouseHover };
+const activateUser = (id) => {
+  return {
+    type: ACTIVE_USER,
+    payload: id,
+  }
+}
+export { onMouseHover, offMouseHover, activateUser };

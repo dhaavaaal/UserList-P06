@@ -7,6 +7,7 @@
   background-color: white;
   border-radius: 25px;
   margin: auto;
+  /* right: 0.7%; */
   right: 3%;
   top: 20%;
   position: fixed;
@@ -17,6 +18,16 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.hovercard-hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  width: 60%;
+  margin: 35% 18% 35% 22%;
+  background-color: aliceblue;
+  border-radius: 10px;
 }
 .card-data {
   display: flex;
@@ -44,6 +55,18 @@
   border-radius: 50%;
   position: relative;
   /* top: -5%; */
+}
+.active-dot-div {
+  display: flex;
+  flex-direction: row;
+}
+.active-dot {
+  height: 5.5px;
+  width: 5.5px;
+  margin-left: 2px;
+  border-radius: 50%;
+  display: flex;
+  background-color: #26946b;
 }
 .active h3 {
   margin: 0;

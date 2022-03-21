@@ -2,6 +2,8 @@
   height: 100%;
   background-color: white;
   width: 95%;
+  /* border-radius: 10px; */
+  /* margin: 0 2.5%; */
 }
 .inner-content-container {
   height: inherit;
