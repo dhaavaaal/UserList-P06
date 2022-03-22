@@ -4,6 +4,7 @@ import {
   ACTIVE_USER,
   DELETE_USER,
 } from './actionTypes';
+
 const onMouseHover = (id) => {
   return {
     type: ON_MOUSE_OVER,

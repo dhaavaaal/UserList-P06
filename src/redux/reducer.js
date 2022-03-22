@@ -118,7 +118,6 @@ const initialState = {
     },
   ],
 };
-
 const reducerFunction = (state = initialState, action) => {
   switch (action.type) {
     case ON_MOUSE_OVER:
