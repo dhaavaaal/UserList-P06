@@ -1,3 +1,4 @@
-export const ON_MOUSE_OVER = 'onMouseOver'
-export const OFF_MOUSE_OVER = 'offMouseOver'
-export const ACTIVE_USER = 'activeUser'
+export const ON_MOUSE_OVER = 'onMouseOver';
+export const OFF_MOUSE_OVER = 'offMouseOver';
+export const ACTIVE_USER = 'activeUser';
+export const DELETE_USER = 'deleteUser';

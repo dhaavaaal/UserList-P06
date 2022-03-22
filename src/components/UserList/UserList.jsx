@@ -2,7 +2,12 @@ import React from 'react';
 import styles from './UserList.module.css';
 import { Lock, Trash2 } from 'react-feather';
 import { useDispatch } from 'react-redux';
-import { onMouseHover, offMouseHover, activateUser } from '../../redux/action';
+import {
+  onMouseHover,
+  offMouseHover,
+  activateUser,
+  deleteUser,
+} from '../../redux/action';
 
 const UserList = (props) => {
   console.log(props);
@@ -26,7 +31,9 @@ const UserList = (props) => {
       </div>
       <div className={styles['status']}>
         {props.isActive ? (
-          <p style={{ color: '#2daf7f', fontWeight: '600', marginLeft: '-5px' }}>
+          <p
+            style={{ color: '#2daf7f', fontWeight: '600', marginLeft: '-5px' }}
+          >
             Active
           </p>
         ) : (
@@ -53,7 +60,11 @@ const UserList = (props) => {
         )}
       </div>
       <div className={styles['lock-remove']}>
-        {props.isOwner ? <Lock /> : <Trash2 />}
+        {props.isOwner ? (
+          <Lock />
+        ) : (
+          <Trash2 onClick={() => dispatch(deleteUser(props.id))} />
+        )}
       </div>
     </div>
   );
