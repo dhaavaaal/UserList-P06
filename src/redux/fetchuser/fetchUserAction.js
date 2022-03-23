@@ -1,9 +1,9 @@
-import axios from "axios";
+import axios from 'axios';
 import {
   FETCH_USER_REQUEST,
   FETCH_USER_SUCCESS,
   FETCH_USER_FAILURE,
-} from "./fetchUserActionTypes";
+} from './fetchUserActionTypes';
 
 const fetchUserRequest = () => {
   return {
@@ -23,16 +23,18 @@ const fetchUserFailure = (error) => {
   };
 };
 
-export const fetchUsers = () => {
+export const fetchUsers = (currentPage) => {
+  console.log(currentPage);
   return (dispatch) => {
     dispatch(fetchUserRequest);
     axios
-      .get("https://reqres.in/api/users?page=1")
+      // .get(`${process.env.REACT_APP_API_ENDPOINT}?page=${currentPage}`)
+      .get(`https://reqres.in/api/users?page=${currentPage}`)
       // .get("https://jsonplaceholder.typicode.com/users")
       .then((response) => {
-        console.log(response);
+        // console.log(response);
         const users = response.data;
-        console.log(users);
+        // console.log(users);
         dispatch(fetchUserSuccess(users));
       })
       .catch((error) => {
