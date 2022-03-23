@@ -1,3 +1,5 @@
+import styles from './Pagination.css';
+
 const Pagination = ({ paginate }) => {
   const pageNumbers = [];
   //   console.log(totalPosts);
@@ -7,7 +9,7 @@ const Pagination = ({ paginate }) => {
   console.log(pageNumbers);
   return (
     <nav className='pagination'>
-      <ul className='pagination'>
+      <ul className='pagination pages'>
         {pageNumbers.map((number) => (
           <li key={number} className='page-item'>
             <a onClick={() => paginate(number)} className='page-link'>

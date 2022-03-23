@@ -14,7 +14,7 @@ const UsersContainer = () => {
     dispatch(fetchUsers(currentPage));
     console.log(currentPage);
   }, [currentPage]);
-  // console.log(userData);
+  console.log(userData);
 
   const paginate = (pageNumber) => {
     const current = pageNumber;
