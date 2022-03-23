@@ -2,13 +2,13 @@ import {
   FETCH_USER_REQUEST,
   FETCH_USER_SUCCESS,
   FETCH_USER_FAILURE,
-} from './fetchUserActionTypes';
+} from "./fetchUserActionTypes";
 
 const initialState = {
   userId: null,
   loading: true,
   users: [],
-  error: '',
+  error: "",
 };
 
 const fetchUserReducerFunction = (state = initialState, action) => {
@@ -22,7 +22,7 @@ const fetchUserReducerFunction = (state = initialState, action) => {
       return {
         loading: false,
         users: action.payload,
-        error: '',
+        error: "",
       };
     case FETCH_USER_FAILURE:
       return {
@@ -30,6 +30,8 @@ const fetchUserReducerFunction = (state = initialState, action) => {
         users: [],
         error: action.payload,
       };
+    default:
+      return state;
   }
 };
 

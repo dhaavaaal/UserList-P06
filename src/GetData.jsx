@@ -1,12 +1,12 @@
-import React, { useEffect } from 'react';
-import { connect } from 'react-redux';
-import { fetchUsers } from './redux/fetchuser/fetchUserAction';
+import React, { useEffect } from "react";
+import { connect } from "react-redux";
+import { fetchUsers } from "./redux/fetchuser/fetchUserAction";
 
 const GetData = ({ userData, fetchUsers }) => {
   useEffect(() => {
     fetchUsers();
   }, []);
-  console.log(fetchUsers);
+  // console.log(fetchUsers);
   console.log(userData);
   return userData.loading ? (
     <h2>Loading</h2>
@@ -15,24 +15,29 @@ const GetData = ({ userData, fetchUsers }) => {
   ) : (
     <div>
       <h2>User List</h2>
+      {/* <div>
+        {userData &&
+          userData.map((user) => <p>{user.name}</p>)}
+      </div> */}
       <div>
         {userData &&
-          userData.users &&
-          userData.users.map((user) => <p>{user.name}</p>)}
+          userData.data &&
+          userData.data.map((user) => <p>{user.first_name}</p>)}
       </div>
     </div>
   );
+  // console.log(userData[0].name);
 };
-
-// const mapStateToProps = (state) => {
-//   return {
-//     userData: state.users,
-//   };
-// };
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     fetchUsers: () => dispatch(fetchUsers()),
-//   };
-// };
-// connect(mapStateToProps, mapDispatchToProps);
-export default GetData;
+// console.log(userData)
+const mapStateToProps = (state) => {
+  return {
+    userData: state.users,
+  };
+};
+const mapDispatchToProps = (dispatch) => {
+  return {
+    fetchUsers: () => dispatch(fetchUsers()),
+  };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(GetData);
+// export default GetData;
