@@ -1,5 +1,5 @@
-import HoverCard from './components/HoverCard/HoverCard';
-import UsersContainer from './components/UsersContainer/UsersContainer';
+import HoverCard from "./components/HoverCard/HoverCard";
+import UsersContainer from "./components/UsersContainer/UsersContainer";
 
 function App() {
   return (

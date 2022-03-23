@@ -6,7 +6,7 @@ import { createStore } from "redux";
 
 const fetchUserStore = createStore(
   fetchUserReducerFunction,
-  applyMiddleware(thunk, logger)
+  applyMiddleware(thunk)
 );
 
 export default fetchUserStore;
