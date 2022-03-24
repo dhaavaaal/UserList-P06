@@ -1,6 +1,6 @@
-import styles from './Pagination.css';
+import styles from "./Pagination.module.css";
 
-const Pagination = ({ paginate }) => {
+const Pagination = ({ paginate, currentPage }) => {
   const pageNumbers = [];
   //   console.log(totalPosts);
   for (let i = 1; i <= 2; i++) {
@@ -8,11 +8,14 @@ const Pagination = ({ paginate }) => {
   }
   console.log(pageNumbers);
   return (
-    <nav className='pagination'>
-      <ul className='pagination pages'>
+    <nav>
+      <ul className={styles.pagination}>
         {pageNumbers.map((number) => (
-          <li key={number} className='page-item'>
-            <a onClick={() => paginate(number)} className='page-link'>
+          <li key={number}>
+            <a
+              onClick={() => paginate(number)}
+              className={number === currentPage ? styles.current : styles.cell}
+            >
               {number}
             </a>
           </li>

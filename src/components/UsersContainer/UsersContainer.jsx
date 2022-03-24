@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import styles from './UsersContainer.module.css';
-import { useDispatch, useSelector } from 'react-redux';
-import UserList from '../UserList/UserList';
-import { fetchUsers } from '../../redux/fetchuser/fetchUserAction';
-import Pagination from '../Pagination/Pagination';
+import React, { useEffect, useState } from "react";
+import styles from "./UsersContainer.module.css";
+import { useDispatch, useSelector } from "react-redux";
+import UserList from "../UserList/UserList";
+import { fetchUsers } from "../../redux/fetchuser/fetchUserAction";
+import Pagination from "../Pagination/Pagination";
 
 const UsersContainer = () => {
   const userData = useSelector((state) => state);
@@ -22,12 +22,12 @@ const UsersContainer = () => {
   };
 
   return (
-    <div className={styles['content-container']}>
-      <div className={styles['inner-content-container']}>
-        <div className={styles['content-heading']}>
-          <div className={styles['font-heading']}>Name</div>
-          <div className={styles['font-heading']}>Status</div>
-          <div className={styles['font-heading']}>Access</div>
+    <div className={styles["content-container"]}>
+      <div className={styles["inner-content-container"]}>
+        <div className={styles["content-heading"]}>
+          <div className={styles["font-heading"]}>Name</div>
+          <div className={styles["font-heading"]}>Status</div>
+          <div className={styles["font-heading"]}>Access</div>
         </div>
         {userData.loading ? (
           <h2>Loading...</h2>
@@ -48,7 +48,7 @@ const UsersContainer = () => {
           ))
         )}
       </div>
-      <Pagination paginate={paginate} />
+      <Pagination paginate={paginate} currentPage={currentPage} />
     </div>
   );
 };
