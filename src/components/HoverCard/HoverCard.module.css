@@ -1,0 +1,144 @@
+/* * {
+  font-family: ui-sans-serif;
+} */
+.hovercard-container {
+  height: 385px;
+  width: 275px;
+  background-color: white;
+  border-radius: 25px;
+  margin: auto;
+  /* right: 0.7%; */
+  right: 3%;
+  top: 20%;
+  position: fixed;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+.hovercard-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.hovercard-hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  width: 60%;
+  margin: 35% 18% 35% 22%;
+  background-color: aliceblue;
+  border-radius: 10px;
+}
+.card-data {
+  display: flex;
+  flex-direction: column;
+  height: 245px;
+  width: 170px;
+  align-items: center;
+  justify-content: center;
+}
+.card-data p {
+  margin: 3px 0 0 0;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  font-family: ui-sans-serif;
+  padding: 1px;
+}
+.card-data h4 {
+  margin: 3px 0 0 0;
+  font-family: ui-sans-serif;
+  padding: 1px;
+}
+.user-image {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  position: relative;
+  /* top: -5%; */
+}
+.active-dot-div {
+  display: flex;
+  flex-direction: row;
+}
+.active-dot {
+  height: 5.5px;
+  width: 5.5px;
+  margin-left: 2px;
+  border-radius: 50%;
+  display: flex;
+  background-color: #26946b;
+}
+.active h3 {
+  margin: 0;
+  margin-top: 10px;
+  font-size: 16px;
+  padding: 1px;
+}
+.active-user-button {
+  padding: 5px;
+  background-color: rgb(245, 175, 70);
+  outline: none;
+  border: 0;
+  margin: 10px 0 0 0;
+  border-radius: 5px;
+  width: 90%;
+  padding: 10px;
+  font-weight: 700;
+  color: white;
+}
+/* .card-uses {
+  justify-content: start !important;
+} */
+.card-uses {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+.card-uses p {
+  margin: 0;
+  margin-top: 7px;
+  font-weight: 700;
+}
+.card-uses meter {
+  width: 100%;
+}
+meter::-webkit-meter-optimum-value {
+  background: rgb(245, 175, 70);
+}
+meter::-webkit-meter-bar {
+  background: rgb(255, 228, 168);
+  border: none;
+  height: 5px;
+}
+.card-clicks {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.seperate-clicks {
+  background-color: rgb(221, 219, 219);
+  height: 40px;
+  width: 1.2px;
+  margin-top: 22px;
+}
+.left-clicks .right-clicks {
+  display: flex;
+  flex-direction: column;
+}
+.left-clicks h2,
+.right-clicks h2 {
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+.left-clicks p,
+.right-clicks p {
+  margin: 0;
+  justify-content: center;
+  font-family: ui-sans-serif;
+  align-items: center;
+  font-size: 13px;
+  color: rgb(85, 85, 85);
+}

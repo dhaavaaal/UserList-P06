@@ -1,0 +1,44 @@
+.list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.profile-column {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  justify-content: flex-start;
+  width: calc(32% - 10px);
+}
+.image {
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+}
+.name-email {
+  margin: 4px 0 0 20px;
+}
+.name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+.email {
+  margin: 0;
+  font-size: 16px;
+}
+.status {
+  width: 19%;
+  justify-content: center;
+  align-items: center;
+}
+select {
+  padding: 7px 12px;
+  border-color: rgb(218, 224, 226);
+  background-color: rgb(225, 232, 235);
+  border-radius: 3px;
+  outline: 0;
+}
+.lock-remove {
+  width: calc(10% - 20px);
+}
