@@ -1,20 +1,19 @@
 import {
-  ACTIVE_USER,
   DELETE_USER,
   OFF_MOUSE_OVER,
   ON_MOUSE_OVER,
-} from '../actionTypes';
+} from "../previousReduxStore/actionTypes";
 import {
   FETCH_USER_REQUEST,
   FETCH_USER_SUCCESS,
   FETCH_USER_FAILURE,
-} from './fetchUserActionTypes';
+} from "./fetchUserActionTypes";
 
 const initialState = {
   userId: null,
   loading: true,
   users: [],
-  error: '',
+  error: "",
 };
 
 const fetchUserReducerFunction = (state = initialState, action) => {
@@ -24,15 +23,13 @@ const fetchUserReducerFunction = (state = initialState, action) => {
         ...state,
         userId: action.payload,
       };
+
     case OFF_MOUSE_OVER:
       return {
         ...state,
         userId: null,
       };
-    case ACTIVE_USER:
-      const userList = [...state.users];
-      userList[action.payload - 1].isActive = true;
-      return { ...state, users: userList };
+
     case DELETE_USER:
       let deleteUserList = { ...state };
       console.log(deleteUserList);
@@ -49,23 +46,27 @@ const fetchUserReducerFunction = (state = initialState, action) => {
         users: trying,
         userId: null,
       };
+
     case FETCH_USER_REQUEST:
       return {
         ...state,
         loading: true,
       };
+
     case FETCH_USER_SUCCESS:
       return {
         loading: false,
         users: action.payload,
-        error: '',
+        error: "",
       };
+
     case FETCH_USER_FAILURE:
       return {
         loading: false,
         users: [],
         error: action.payload,
       };
+
     default:
       return state;
   }

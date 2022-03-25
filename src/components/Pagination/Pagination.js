@@ -2,7 +2,6 @@ import styles from "./Pagination.module.css";
 
 const Pagination = ({ paginate, currentPage }) => {
   const pageNumbers = [];
-  //   console.log(totalPosts);
   for (let i = 1; i <= 2; i++) {
     pageNumbers.push(i);
   }

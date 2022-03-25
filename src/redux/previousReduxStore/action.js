@@ -3,7 +3,7 @@ import {
   OFF_MOUSE_OVER,
   ACTIVE_USER,
   DELETE_USER,
-} from './actionTypes';
+} from "./actionTypes";
 
 const onMouseHover = (id) => {
   return {

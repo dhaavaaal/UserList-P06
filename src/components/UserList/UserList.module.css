@@ -14,7 +14,6 @@
   height: 55px;
   width: 55px;
   border-radius: 50%;
-  /* margin-left: 10px; */
 }
 .name-email {
   margin: 4px 0 0 20px;
@@ -39,7 +38,6 @@ select {
   background-color: rgb(225, 232, 235);
   border-radius: 3px;
   outline: 0;
-  /* -webkit-appearance: none; */
 }
 .lock-remove {
   width: calc(10% - 20px);

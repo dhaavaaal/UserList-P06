@@ -4,13 +4,12 @@ import { Lock, Trash2 } from "react-feather";
 import { useDispatch } from "react-redux";
 import {
   onMouseHover,
-  offMouseHover,
+  // offMouseHover,
   activateUser,
   deleteUser,
-} from "../../redux/action";
+} from "../../redux/previousReduxStore/action";
 
 const UserList = (props) => {
-  // console.log(props);
   const dispatch = useDispatch();
   return (
     <div className={styles["list"]}>
